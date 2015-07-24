@@ -15,7 +15,10 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-private slots:
+private slots: 
+    void makePlot();
+
+    void on_Button_Reset_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -4,19 +4,26 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = IHM_Reflow_Oven
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    qcustomplot.cpp \
+    myserver.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    qcustomplot.h \
+    myserver.h
 
 FORMS    += mainwindow.ui
 
+CONFIG +=qwt
+
+INCLUDEPATH += C:\qwt-6.1.2\include
 
